@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Style Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+
+    
+   
+    <nav class="bg-white fixed w-full top-0 left-0 border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="https://flowbite.com/" class="  items-center space-x-3 rtl:space-x-reverse">
+        <img src="./images/logo.png" class="h-8" alt="Flowbite Logo" />
+        
+    </a>
+    <div class="flex md:order-2">
+      <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+        <span class="sr-only">Search</span>
+      </button>
+      <div class="relative hidden md:block">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          </svg>
+          <span class="sr-only">Search icon</span>
+        </div>
+        <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+      </div>
+      <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <!-- icons -->
+      <div>
+          <ul><li class="ml-5" style="cursor: pointer;"><i class="fa-regular fa-user"></i></li></ul>
+          <p class="ml-2">profile</p>
+      </div>
+      <div class="ml-2">
+        <ul><li class="ml-8" style="cursor: pointer;"><i class="fa-regular fa-heart"></i></li></ul>
+        <p class="ml-3">whishList</p>
+    </div>
+    <div class="ml-2">
+        <ul><li class="ml-5" style="cursor: pointer;"> <i class="fa-solid fa-bag-shopping"></i></li></ul>
+        <p class="ml-4">Bag</p>
+    </div>
+   
+    </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <div class="relative mt-3 md:hidden">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+          </div>
+          <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for products,brands and more">
+        
+        </div>
+        
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">MEN</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">WOMEN</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">KIDS</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">HOME&LIVING</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">BEAUTY</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">STUDIO</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="mt-24">
+    <img style="cursor: pointer;" src="./images/home.png" alt="">
+  </div>
+  <div class="mt-20 ml-28">
+    <img  style="cursor: pointer;" src="./images/maxresdefault.jpg" alt="">
+  </div>
+  
+<!-- grid section -->
+  <section class="text-center py-10">
+    <h1 class="text-4xl font-bold mb-10">CATEGORIES TO CART</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 px-10">
+      <!-- Ethnic Wear -->
+      <div class="border-lg overflow-hidden bg-red-700">
+        <img src="./images/ethinic.jpg" alt="Ethnic Wear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-500-700">
+          <h2 class="text-xl font-semibold text-white">Ethnic Wear</h2>
+          <p class="text-red-600 font-bold text-white">50-80% OFF</p>
+          <button class="mt-1 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- WFH Casual Wear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/casual.jpg" alt="WFH Casual Wear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white">WFH Casual Wear</h2>
+          <p class="text-red-600 font-bold text-white">40-80% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Men's Activewear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/Mens-Activewear.webp" alt="Men's Activewear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700 ">
+        
+          <h2 class="text-xl font-semibold text-white">Men's Activewear</h2>
+          <p class="text-red-600 font-bold text-white">30-70% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Women's Activewear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/womens active.webp" alt="Women's Activewear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white"> Activewear</h2>
+          <p class="text-red-600 font-bold text-white">30-70% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Western Wear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/western.jpg" alt="Western Wear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white">Western Wear</h2>
+          <p class="text-red-600 font-bold text-white">40-80% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Sportswear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/sports.webp" alt="Sportswear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white">Sportswear</h2>
+          <p class="text-red-600 font-bold text-white">30-80% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+      <div class="border-lg overflow-hidden bg-red-700">
+        <img src="./images/lounge.webp" alt="Ethnic Wear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-500-700">
+          <h2 class="text-xl font-semibold text-white">Lounge Wear</h2>
+          <p class="text-red-600 font-bold text-white">30-60% OFF</p>
+          <button class="mt-1 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- WFH Casual Wear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/inner.jpg" alt="WFH Casual Wear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white">Inner Wear</h2>
+          <p class="text-red-600 font-bold text-white">40-80% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Men's Activewear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/watches.avif" alt="Men's Activewear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700 ">
+        
+          <h2 class="text-xl font-semibold text-white">Watches</h2>
+          <p class="text-red-600 font-bold text-white">30-70% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Women's Activewear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/grooming.webp" alt="Women's Activewear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white"> Grooming</h2>
+          <p class="text-red-600 font-bold text-white">30-70% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Western Wear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/make up.jpg" alt="Western Wear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white">Beauty&Make Up</h2>
+          <p class="text-red-600 font-bold text-white">40-80% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Sportswear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/kids.avif" alt="Sportswear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white">Kidswear</h2>
+          <p class="text-red-600 font-bold text-white">30-80% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+      <div class="border-lg overflow-hidden bg-red-700">
+        <img src="./images/mens foot.jpg" alt="Ethnic Wear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-500-700">
+          <h2 class="text-xl font-semibold text-white">Mens Foot Wear</h2>
+          <p class="text-red-600 font-bold text-white">50-80% OFF</p>
+          <button class="mt-1 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- WFH Casual Wear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/wfoot.jpg" alt="WFH Casual Wear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white">Women Foot Wear</h2>
+          <p class="text-red-600 font-bold text-white">40-80% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Men's Activewear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/bags.avif" alt="Men's Activewear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700 ">
+        
+          <h2 class="text-xl font-semibold text-white">Bags Belts&Wallets</h2>
+          <p class="text-red-600 font-bold text-white">30-70% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Women's Activewear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/office.jpg" alt="Women's Activewear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white"> Office Wear</h2>
+          <p class="text-red-600 font-bold text-white">30-70% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Western Wear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/home.jpg" alt="Western Wear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white">Home Decor</h2>
+          <p class="text-red-600 font-bold text-white">40-80% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Sportswear -->
+      <div class="border-lg overflow-hidden">
+        <img src="./images/jewelery.jpg" alt="Sportswear" class="w-full h-64 object-cover">
+        <div class="p-4 bg-red-700">
+          <h2 class="text-xl font-semibold text-white">Jewelery</h2>
+          <p class="text-red-600 font-bold text-white">30-80% OFF</p>
+          <button class="mt-2 bg-red-700 text-white px-4 py-2 rounded">Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section -->
+  <footer class="bg-white py-8">
+    <div class="container mx-auto px-4">
+        <!-- First Row -->
+        <div class="grid grid-cols-4 gap-8">
+            <!-- Online Shopping Section -->
+            <div>
+                <h3 class="font-bold text-lg mb-4">ONLINE SHOPPING</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>Kids</li>
+                    <li>Home & Living</li>
+                    <li>Beauty</li>
+                    <li>Gift Cards</li>
+                    <li>Myntra Insider</li>
+                </ul>
+            </div>
+
+            <!-- Customer Policies Section -->
+            <div>
+                <h3 class="font-bold text-lg mb-4">CUSTOMER POLICIES</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>Contact Us</li>
+                    <li>FAQ</li>
+                    <li>T&C</li>
+                    <li>Track Orders</li>
+                    <li>Shipping</li>
+                    <li>Cancellation</li>
+                    <li>Returns</li>
+                    <li>Privacy Policy</li>
+                    <li>Grievance Officer</li>
+                </ul>
+            </div>
+
+            <!-- Useful Links Section -->
+            <div>
+                <h3 class="font-bold text-lg mb-4">USEFUL LINKS</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>Blog</li>
+                    <li>Careers</li>
+                    <li>Site Map</li>
+                    <li>Corporate Information</li>
+                    <li>Whitehat</li>
+                    <li>Cleartrip</li>
+                </ul>
+            </div>
+
+            <!-- Mobile Apps & Social Media Section -->
+            <div>
+                <h3 class="font-bold text-lg mb-4">EXPERIENCE MYNTRA APP ON MOBILE</h3>
+                <div class="flex space-x-4 mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-10">
+                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred_2x.png" alt="App Store" class="h-10">
+                </div>
+                <h3 class="font-bold text-lg mb-4">KEEP IN TOUCH</h3>
+                <div class="flex space-x-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="h-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" class="h-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="h-6">
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="flex justify-between items-center mt-8">
+            <div class="text-gray-600">
+                <p>100% ORIGINAL guarantee for all products at myntra.com</p>
+            </div>
+            <div class="flex items-center space-x-2">
+                <img src="./images/return.webp" alt="Return Policy" class="h-6">
+                <p class="text-gray-600">Return within 14 days of receiving your order</p>
+            </div>
+        </div>
+
+        <!-- Popular Searches Section -->
+        <div class="mt-8">
+            <h3 class="font-bold text-lg mb-4">POPULAR SEARCHES</h3>
+            <div class="text-gray-600 text-sm flex flex-wrap space-x-4">
+                <a href="#">Makeup</a> |
+                <a href="#">Dresses For Girls</a> |
+                <a href="#">T-Shirts</a> |
+                <a href="#">Sandals</a> |
+                <a href="#">Headphones</a> |
+                <a href="#">Babydolls</a> |
+                <!-- Add more links as necessary -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+  
+
+
+</body>
+</html>
